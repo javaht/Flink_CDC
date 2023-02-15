@@ -50,13 +50,21 @@ object cdcDemo {
         |      'database-name' = 'cdc_test',
         |      'table-name' = 'user_info',
         |      'jdbc.properties.useSSL' = 'false',
-        |      'scan.startup.mode' = 'earliest-offset',
+        |      'scan.startup.mode' = 'initial',
         |      'scan.snapshot.fetch.size' ='1024',
         |      'debezium.mysql.include.schema.changes'='true',
         |      'debezium.snapshot.locking.mode' = 'none'
         |)
         |""".stripMargin)
 
+
+    //'scan.startup.mode' = 'initial',
+
+    //'scan.startup.mode' = 'timestamp',
+    //'scan.startup.timestamp-millis'  ='1676471846000',
+
+    // 'scan.startup.timestamp-millis'  =""
+    // 'scan.startup.mode' = 'earliest-offset',
 
         val date = new Date()
         val ts: Long = date.getTime
